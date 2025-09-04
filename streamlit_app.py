@@ -31,8 +31,6 @@ def main():
     # ステップ5: 7原則のまとめ
     show_seven_principles()
     
-    # 追加の工夫: インタラクティブなチャート
-    show_accessibility_visualization()
 
 
 def show_introduction():
@@ -207,77 +205,126 @@ def show_simulation():
 def show_difference_explanation():
     st.header("ステップ4: 「バリアフリー」と「ユニバーサルデザイン」の違いって？")
     
-    st.subheader("考え方の違いを知ろう")
+    # 分かりやすい比較表を追加
+    st.markdown("""
+    ### 🤔 どちらも「使いやすくする」けれど、考え方が違います
+    """)
     
-    tab1, tab2 = st.tabs(["バリアフリー", "ユニバーサルデザイン"])
+    # 比較表をHTMLで作成
+    st.markdown("""
+    <div style="margin: 20px 0;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 16px;">
+            <tr style="background-color: #f0f2f6;">
+                <th style="padding: 15px; border: 2px solid #ddd; text-align: center;"></th>
+                <th style="padding: 15px; border: 2px solid #ddd; text-align: center; background-color: #ffe6cc;">🔧 バリアフリー</th>
+                <th style="padding: 15px; border: 2px solid #ddd; text-align: center; background-color: #e6ffe6;">🌟 ユニバーサルデザイン</th>
+            </tr>
+            <tr>
+                <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;">考え方</td>
+                <td style="padding: 15px; border: 1px solid #ddd;">問題が<strong>起きてから</strong>解決</td>
+                <td style="padding: 15px; border: 1px solid #ddd;">最初から問題が<strong>起きないように</strong>設計</td>
+            </tr>
+            <tr>
+                <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;">対象</td>
+                <td style="padding: 15px; border: 1px solid #ddd;">特定の人（困っている人）</td>
+                <td style="padding: 15px; border: 1px solid #ddd;">すべての人（誰でも）</td>
+            </tr>
+            <tr>
+                <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;">費用</td>
+                <td style="padding: 15px; border: 1px solid #ddd;">後から改修するので<strong>高い</strong></td>
+                <td style="padding: 15px; border: 1px solid #ddd;">最初から設計するので<strong>効率的</strong></td>
+            </tr>
+        </table>
+    </div>
+    """, unsafe_allow_html=True)
     
-    with tab1:
-        st.markdown("### 「障壁（バリア）を取り除く」")
-        
-        # 簡単な図解をPlotlyで作成
-        fig = go.Figure()
-        
-        # 階段
-        fig.add_trace(go.Scatter(
-            x=[1, 2, 3, 4], y=[0, 1, 2, 3], mode='lines+markers',
-            name='階段（既存）', line=dict(color='gray', width=8),
-            marker=dict(size=12, color='gray')
-        ))
-        
-        # 後付けスロープ
-        fig.add_trace(go.Scatter(
-            x=[0.5, 4.5], y=[0, 3], mode='lines+markers',
-            name='後付けスロープ', line=dict(color='orange', width=6, dash='dash'),
-            marker=dict(size=10, color='orange')
-        ))
-        
-        fig.update_layout(
-            title="バリアフリーのアプローチ",
-            xaxis_title="",
-            yaxis_title="高さ",
-            showlegend=True,
-            height=300
-        )
-        
-        st.plotly_chart(fig, use_container_width=True)
-        
+    st.markdown("### 🏠 身近な例で比べてみよう！")
+    
+    # より分かりやすい例を3つのカラムで表示
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
         st.markdown("""
-        **バリアフリーは、後から障壁を取り除くアプローチです。**
-        
-        例えば、「階段しかないから、車椅子の人のためにスロープを付け加えよう」という発想です。
-        特定の誰かのための改善策と言えます。
-        """)
+        <div style="padding: 15px; border: 2px solid #ddd; border-radius: 10px; height: 280px;">
+        <h4 style="text-align: center; color: #666;">😓 問題のある設計</h4>
+        <div style="text-align: center; margin: 20px 0;">
+        🏢<br>
+        |||||||<br>
+        |||||||<br>
+        |||||||<br>
+        </div>
+        <p style="text-align: center; font-size: 14px;">階段だけの入り口<br>→ 車椅子の人は入れない</p>
+        </div>
+        """, unsafe_allow_html=True)
     
-    with tab2:
-        st.markdown("### 「はじめから障壁を作らない」")
-        
-        # 簡単な図解をPlotlyで作成
-        fig = go.Figure()
-        
-        # 最初からのスロープ
-        fig.add_trace(go.Scatter(
-            x=[0, 4], y=[0, 3], mode='lines+markers',
-            name='緩やかなスロープ', line=dict(color='green', width=8),
-            marker=dict(size=12, color='green')
-        ))
-        
-        fig.update_layout(
-            title="ユニバーサルデザインのアプローチ",
-            xaxis_title="",
-            yaxis_title="高さ",
-            showlegend=True,
-            height=300
-        )
-        
-        st.plotly_chart(fig, use_container_width=True)
-        
+    with col2:
         st.markdown("""
-        **ユニバーサルデザインは、計画の最初から多様な人々を想定するアプローチです。**
+        <div style="padding: 15px; border: 2px solid #ff9800; border-radius: 10px; height: 280px; background-color: #fff3e0;">
+        <h4 style="text-align: center; color: #f57f17;">🔧 バリアフリー</h4>
+        <div style="text-align: center; margin: 20px 0;">
+        🏢<br>
+        ||||||| 〜〜〜<br>
+        ||||||| 〜〜<br>
+        ||||||| 〜<br>
+        </div>
+        <p style="text-align: center; font-size: 14px;"><strong>後から</strong>スロープを追加<br>→ 車椅子の人も入れるように</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown("""
+        <div style="padding: 15px; border: 2px solid #4caf50; border-radius: 10px; height: 280px; background-color: #f1f8e9;">
+        <h4 style="text-align: center; color: #2e7d32;">🌟 ユニバーサルデザイン</h4>
+        <div style="text-align: center; margin: 20px 0;">
+        🏢<br>
+        〜〜〜〜〜<br>
+        〜〜〜〜<br>
+        〜〜〜<br>
+        </div>
+        <p style="text-align: center; font-size: 14px;"><strong>最初から</strong>緩やかなスロープ<br>→ みんなが楽に入れる</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("### 📱 スマホアプリの例でも見てみよう")
+    
+    # インタラクティブな例を追加
+    example_choice = st.radio(
+        "どちらのアプリが使いやすいですか？",
+        ["アプリA: 後から改善", "アプリB: 最初から配慮"]
+    )
+    
+    if example_choice == "アプリA: 後から改善":
+        st.markdown("""
+        <div style="border: 2px solid #ff9800; border-radius: 10px; padding: 20px; background-color: #fff3e0;">
+        <h4 style="color: #f57f17;">📱 アプリA (バリアフリー的アプローチ)</h4>
+        <p><strong>最初:</strong> 英語のみでリリース</p>
+        <p><strong>問題発生:</strong> 「日本語がないから使えない」という苦情</p>
+        <p><strong>対応:</strong> 後から日本語翻訳機能を追加</p>
+        <p style="color: #d32f2f;">💸 <strong>結果:</strong> 翻訳作業に時間とコストがかかる</p>
+        </div>
+        """, unsafe_allow_html=True)
         
-        「車椅子の人、ベビーカーを押す人、荷物が重い人…みんなが楽だから、
-        最初からゆるやかなスロープにしよう」という発想です。
-        みんなのためのデザインと言えます。
-        """)
+    else:
+        st.markdown("""
+        <div style="border: 2px solid #4caf50; border-radius: 10px; padding: 20px; background-color: #f1f8e9;">
+        <h4 style="color: #2e7d32;">📱 アプリB (ユニバーサルデザインアプローチ)</h4>
+        <p><strong>企画段階:</strong> 「世界中の人が使うかも」と考える</p>
+        <p><strong>設計:</strong> 最初から多言語対応で設計</p>
+        <p><strong>リリース:</strong> 英語・日本語・中国語などに対応済み</p>
+        <p style="color: #2e7d32;">✨ <strong>結果:</strong> より多くの人がすぐに使える</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # まとめ
+    st.markdown("---")
+    st.markdown("""
+    ### 🎯 つまり...
+    
+    - **バリアフリー**: 「困っている人がいるから助けよう」→ **優しい後付け対応**
+    - **ユニバーサルデザイン**: 「みんなが使えるものを作ろう」→ **賢い最初の設計**
+    
+    どちらも大切ですが、ユニバーサルデザインの方が効率的で、より多くの人が恩恵を受けられます！
+    """)
 
 
 def show_seven_principles():
@@ -353,59 +400,12 @@ def show_seven_principles():
     
     ユニバーサルデザインを意識することで、より多くの人にとって使いやすい世界を作っていけるのです！
     """)
+    
+    # フォントサイズ体験を7原則の後に追加
+    show_font_size_experience()
 
 
-def show_accessibility_visualization():
-    st.markdown("---")
-    st.header("おまけ: アクセシビリティの重要度を可視化")
-    
-    st.write("日常生活でのアクセシビリティニーズを、年代別に可視化してみました。")
-    
-    # 年代別のアクセシビリティニーズデータ
-    age_groups = ['10代', '20代', '30代', '40代', '50代', '60代', '70代以上']
-    visual_needs = [10, 15, 25, 40, 55, 70, 85]
-    mobility_needs = [5, 10, 15, 25, 35, 50, 70]
-    cognitive_needs = [20, 15, 20, 25, 30, 40, 50]
-    
-    fig = go.Figure()
-    
-    fig.add_trace(go.Bar(
-        name='視覚サポート',
-        x=age_groups,
-        y=visual_needs,
-        marker_color='lightblue'
-    ))
-    
-    fig.add_trace(go.Bar(
-        name='移動サポート',
-        x=age_groups,
-        y=mobility_needs,
-        marker_color='lightgreen'
-    ))
-    
-    fig.add_trace(go.Bar(
-        name='認知サポート',
-        x=age_groups,
-        y=cognitive_needs,
-        marker_color='lightcoral'
-    ))
-    
-    fig.update_layout(
-        title='年代別アクセシビリティニーズ（想定値）',
-        xaxis_title='年代',
-        yaxis_title='サポートが必要な人の割合（%）',
-        barmode='group',
-        height=400
-    )
-    
-    st.plotly_chart(fig, use_container_width=True)
-    
-    st.info("""
-    **ポイント:** 年齢を重ねるにつれて、何らかのサポートが必要になる可能性は誰にでもあります。
-    ユニバーサルデザインは、特定の人のためだけではなく、将来の自分自身のためでもあるのです。
-    """)
-    
-    # インタラクティブな体験
+def show_font_size_experience():
     st.markdown("### 体験してみよう: フォントサイズの違い")
     
     font_size = st.slider("フォントサイズを調整してください", 12, 24, 16)
@@ -413,7 +413,7 @@ def show_accessibility_visualization():
     sample_text = "このテキストの読みやすさはどうですか？"
     
     st.markdown(f"""
-    <p style="font-size: {font_size}px; line-height: 1.6; padding: 20px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+    <p style="color: black; font-size: {font_size}px; line-height: 1.6; padding: 20px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
     {sample_text}
     </p>
     """, unsafe_allow_html=True)
