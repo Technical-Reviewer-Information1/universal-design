@@ -245,7 +245,7 @@ def show_difference_explanation():
     
     with col1:
         st.markdown("""
-        <div style="padding: 15px; border: 2px solid #ddd; border-radius: 10px; height: 280px;">
+        <div style="padding: 15px; border: 2px solid #ddd; border-radius: 10px; height: 280px; background-color: white;">
         <h4 style="text-align: center; color: #666;">😓 問題のある設計</h4>
         <div style="text-align: center; margin: 20px 0;">
         🏢<br>
@@ -253,7 +253,7 @@ def show_difference_explanation():
         |||||||<br>
         |||||||<br>
         </div>
-        <p style="text-align: center; font-size: 14px;">階段だけの入り口<br>→ 車椅子の人は入れない</p>
+        <p style="text-align: center; font-size: 14px; color: black;">階段だけの入り口<br>→ 車椅子の人は入れない</p>
         </div>
         """, unsafe_allow_html=True)
     
@@ -267,7 +267,7 @@ def show_difference_explanation():
         ||||||| 〜〜<br>
         ||||||| 〜<br>
         </div>
-        <p style="text-align: center; font-size: 14px;"><strong>後から</strong>スロープを追加<br>→ 車椅子の人も入れるように</p>
+        <p style="text-align: center; font-size: 14px; color: black;"><strong>後から</strong>スロープを追加<br>→ 車椅子の人も入れるように</p>
         </div>
         """, unsafe_allow_html=True)
     
@@ -281,7 +281,7 @@ def show_difference_explanation():
         〜〜〜〜<br>
         〜〜〜<br>
         </div>
-        <p style="text-align: center; font-size: 14px;"><strong>最初から</strong>緩やかなスロープ<br>→ みんなが楽に入れる</p>
+        <p style="text-align: center; font-size: 14px; color: black;"><strong>最初から</strong>緩やかなスロープ<br>→ みんなが楽に入れる</p>
         </div>
         """, unsafe_allow_html=True)
     
