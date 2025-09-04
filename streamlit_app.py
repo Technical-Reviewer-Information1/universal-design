@@ -300,7 +300,7 @@ def show_difference_explanation():
         <p><strong>最初:</strong> 英語のみでリリース</p>
         <p><strong>問題発生:</strong> 「日本語がないから使えない」という苦情</p>
         <p><strong>対応:</strong> 後から日本語翻訳機能を追加</p>
-        <p style="color: #d32f2f;">💸 <strong>結果:</strong> 翻訳作業に時間とコストがかかる</p>
+        <p>💸 <strong>結果:</strong> 翻訳作業に時間とコストがかかる</p>
         </div>
         """, unsafe_allow_html=True)
         
