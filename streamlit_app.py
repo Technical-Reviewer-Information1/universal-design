@@ -210,29 +210,29 @@ def show_difference_explanation():
     ### 🤔 どちらも「使いやすくする」けれど、考え方が違います
     """)
     
-    # 比較表をHTMLで作成
+    # 比較表をHTMLで作成（ダークテーマ対応）
     st.markdown("""
     <div style="margin: 20px 0;">
-        <table style="width: 100%; border-collapse: collapse; font-size: 16px;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 16px; background-color: white;">
             <tr style="background-color: #f0f2f6;">
-                <th style="padding: 15px; border: 2px solid #ddd; text-align: center;"></th>
-                <th style="padding: 15px; border: 2px solid #ddd; text-align: center; background-color: #ffe6cc;">🔧 バリアフリー</th>
-                <th style="padding: 15px; border: 2px solid #ddd; text-align: center; background-color: #e6ffe6;">🌟 ユニバーサルデザイン</th>
+                <th style="padding: 15px; border: 2px solid #333; text-align: center; color: black;"></th>
+                <th style="padding: 15px; border: 2px solid #333; text-align: center; background-color: #ffe6cc; color: black;">🔧 バリアフリー</th>
+                <th style="padding: 15px; border: 2px solid #333; text-align: center; background-color: #e6ffe6; color: black;">🌟 ユニバーサルデザイン</th>
             </tr>
             <tr>
-                <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;">考え方</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">問題が<strong>起きてから</strong>解決</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">最初から問題が<strong>起きないように</strong>設計</td>
+                <td style="padding: 15px; border: 1px solid #333; font-weight: bold; background-color: #f8f9fa; color: black;">考え方</td>
+                <td style="padding: 15px; border: 1px solid #333; background-color: white; color: black;">問題が<strong>起きてから</strong>解決</td>
+                <td style="padding: 15px; border: 1px solid #333; background-color: white; color: black;">最初から問題が<strong>起きないように</strong>設計</td>
             </tr>
             <tr>
-                <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;">対象</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">特定の人（困っている人）</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">すべての人（誰でも）</td>
+                <td style="padding: 15px; border: 1px solid #333; font-weight: bold; background-color: #f8f9fa; color: black;">対象</td>
+                <td style="padding: 15px; border: 1px solid #333; background-color: white; color: black;">特定の人（困っている人）</td>
+                <td style="padding: 15px; border: 1px solid #333; background-color: white; color: black;">すべての人（誰でも）</td>
             </tr>
             <tr>
-                <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;">費用</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">後から改修するので<strong>高い</strong></td>
-                <td style="padding: 15px; border: 1px solid #ddd;">最初から設計するので<strong>効率的</strong></td>
+                <td style="padding: 15px; border: 1px solid #333; font-weight: bold; background-color: #f8f9fa; color: black;">費用</td>
+                <td style="padding: 15px; border: 1px solid #333; background-color: white; color: black;">後から改修するので<strong>高い</strong></td>
+                <td style="padding: 15px; border: 1px solid #333; background-color: white; color: black;">最初から設計するので<strong>効率的</strong></td>
             </tr>
         </table>
     </div>
@@ -297,10 +297,10 @@ def show_difference_explanation():
         st.markdown("""
         <div style="border: 2px solid #ff9800; border-radius: 10px; padding: 20px; background-color: #fff3e0;">
         <h4 style="color: #f57f17;">📱 アプリA (バリアフリー的アプローチ)</h4>
-        <p><strong>最初:</strong> 英語のみでリリース</p>
-        <p><strong>問題発生:</strong> 「日本語がないから使えない」という苦情</p>
-        <p><strong>対応:</strong> 後から日本語翻訳機能を追加</p>
-        <p>💸 <strong>結果:</strong> 翻訳作業に時間とコストがかかる</p>
+        <p style="color: black;"><strong>最初:</strong> 英語のみでリリース</p>
+        <p style="color: black;"><strong>問題発生:</strong> 「日本語がないから使えない」という苦情</p>
+        <p style="color: black;"><strong>対応:</strong> 後から日本語翻訳機能を追加</p>
+        <p style="color: black;">💸 <strong>結果:</strong> 翻訳作業に時間とコストがかかる</p>
         </div>
         """, unsafe_allow_html=True)
         
@@ -308,9 +308,9 @@ def show_difference_explanation():
         st.markdown("""
         <div style="border: 2px solid #4caf50; border-radius: 10px; padding: 20px; background-color: #f1f8e9;">
         <h4 style="color: #2e7d32;">📱 アプリB (ユニバーサルデザインアプローチ)</h4>
-        <p><strong>企画段階:</strong> 「世界中の人が使うかも」と考える</p>
-        <p><strong>設計:</strong> 最初から多言語対応で設計</p>
-        <p><strong>リリース:</strong> 英語・日本語・中国語などに対応済み</p>
+        <p style="color: black;"><strong>企画段階:</strong> 「世界中の人が使うかも」と考える</p>
+        <p style="color: black;"><strong>設計:</strong> 最初から多言語対応で設計</p>
+        <p style="color: black;"><strong>リリース:</strong> 英語・日本語・中国語などに対応済み</p>
         <p style="color: #2e7d32;">✨ <strong>結果:</strong> より多くの人がすぐに使える</p>
         </div>
         """, unsafe_allow_html=True)
