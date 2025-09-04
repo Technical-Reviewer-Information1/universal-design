@@ -166,9 +166,9 @@ def show_simulation():
     if situation == "通常の見え方":
         st.markdown("""
         <div style="padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: white;">
-        <h4>商品購入ページ</h4>
-        <p><span style="color: red; font-weight: bold;">注意！</span> この商品の在庫が残り少なくなっています。</p>
-        <p>この商品は<span style="color: green; font-weight: bold;">緑色のボタン</span>から購入できます。</p>
+        <h4 style="color: black;">商品購入ページ</h4>
+        <p style="color: black;"><span style="color: red; font-weight: bold;">注意！</span> この商品の在庫が残り少なくなっています。</p>
+        <p style="color: black;">この商品は<span style="color: green; font-weight: bold;">緑色のボタン</span>から購入できます。</p>
         <button style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">購入する</button>
         </div>
         """, unsafe_allow_html=True)
@@ -176,9 +176,9 @@ def show_simulation():
     elif situation == "色の見え方が少し違うかも":
         st.markdown("""
         <div style="padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: white;">
-        <h4>商品購入ページ</h4>
-        <p><span style="color: #8B4513; font-weight: bold;">注意！</span> この商品の在庫が残り少なくなっています。</p>
-        <p>この商品は<span style="color: #8B4513; font-weight: bold;">ボタン</span>から購入できます。</p>
+        <h4 style="color: black;">商品購入ページ</h4>
+        <p style="color: black;"><span style="color: #8B4513; font-weight: bold;">注意！</span> この商品の在庫が残り少なくなっています。</p>
+        <p style="color: black;">この商品は<span style="color: #8B4513; font-weight: bold;">ボタン</span>から購入できます。</p>
         <button style="background-color: #8B4513; color: white; padding: 10px 20px; border: none; border-radius: 5px;">購入する</button>
         </div>
         """, unsafe_allow_html=True)
@@ -191,9 +191,9 @@ def show_simulation():
     elif situation == "ちょっと視力が落ちてきたかも":
         st.markdown("""
         <div style="padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: white;">
-        <h4 style="font-size: 12px; opacity: 0.7;">商品購入ページ</h4>
-        <p style="font-size: 10px; opacity: 0.7;"><span style="color: red; font-weight: bold;">注意！</span> この商品の在庫が残り少なくなっています。</p>
-        <p style="font-size: 10px; opacity: 0.7;">この商品は<span style="color: green; font-weight: bold;">緑色のボタン</span>から購入できます。</p>
+        <h4 style="color: black; font-size: 12px; opacity: 0.7;">商品購入ページ</h4>
+        <p style="color: black; font-size: 10px; opacity: 0.7;"><span style="color: red; font-weight: bold;">注意！</span> この商品の在庫が残り少なくなっています。</p>
+        <p style="color: black; font-size: 10px; opacity: 0.7;">この商品は<span style="color: green; font-weight: bold;">緑色のボタン</span>から購入できます。</p>
         <button style="background-color: green; color: white; padding: 5px 10px; border: none; border-radius: 5px; font-size: 10px;">購入する</button>
         </div>
         """, unsafe_allow_html=True)
