@@ -4,7 +4,7 @@ import plotly.express as px
 
 
 def main():
-    st.title("ユニバーサルデザインを体験しよう！")
+    st.title("ユニバーサルデザイン（pp.197-200）")
     st.caption("Created by Dit-Lab.(Daiki ITO)")
     st.caption("Supported by Tomoaki ATSUMI")
     
