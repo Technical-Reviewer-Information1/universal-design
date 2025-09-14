@@ -381,8 +381,7 @@ def show_font_size_experience():
 
 if __name__ == "__main__":
     st.set_page_config(
-        page_title="ユニバーサルデザイン体験アプリ",
-        page_icon="♿",
+        page_title="ユニバーサルデザイン",
         layout="wide",
         initial_sidebar_state="collapsed"
     )
