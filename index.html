@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ユニバーサルデザイン｜情報Ⅰ共通テスト対策問題集</title>
+<meta name="description" content="ピクトグラムを読み、コントラストや文字サイズを実際に動かしながら、誰にとっても使いやすいデザインを考えます。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 fill=%22%2315181c%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2218%22 font-family=%22monospace%22 fill=%22%23fff%22 text-anchor=%22middle%22%3E01%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="inner">
+    <span class="eyebrow">第 7 章　情報デザイン　7-2</span>
+    <h1>ユニバーサルデザイン（pp.197-198）</h1>
+    <p class="lead">ピクトグラムを読み、コントラストや文字サイズを実際に動かしながら、誰にとっても使いやすいデザインを考えます。</p>
+    <p class="credit">Created by Dit-Lab.(Daiki ITO)　/　Supported by Tomoaki ATSUMI</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="step" id="step1">
+    <h2><span class="no">STEP 1</span>ピクトグラムを読む（問1）</h2>
+    <p class="desc">言葉が読めなくても意味が伝わる図記号を<strong>ピクトグラム</strong>といいます。まず、言葉を見ずに何を表しているか考えてみましょう。</p>
+    <div class="panel">
+      <div class="pictos" id="pictoBox"></div>
+      <div class="note info" id="pictoNote" style="margin-top:12px">絵をクリックすると意味が出ます。</div>
+      <hr class="sep">
+      <div id="q1Box"></div>
+      <div class="note" id="q1Note" style="margin-top:10px"></div>
+      <hr class="sep">
+      <p class="qhead">似ていることばの区別</p>
+      <div class="tbl-scroll"><table class="tbl" id="termTable"></table></div>
+    </div>
+  </section>
+
+  <section class="step" id="step2">
+    <h2><span class="no">STEP 2</span>バリアフリーとユニバーサルデザイン（問2ウ）</h2>
+    <p class="desc">「あとから障壁を取り除く」のか、「はじめから障壁がない」のか。ここが違いです。</p>
+    <div class="panel">
+      <div id="udBox"></div>
+      <div class="note" id="udNote" style="margin-top:12px"></div>
+      <hr class="sep">
+      <div id="q2Box"></div>
+      <div class="note" id="q2Note" style="margin-top:10px"></div>
+    </div>
+  </section>
+
+  <section class="step" id="step3">
+    <h2><span class="no">STEP 3</span>ユーザビリティとアクセシビリティ（問2エ〜カ）</h2>
+    <div class="panel">
+      <div class="tbl-scroll"><table class="tbl" id="uaTable"></table></div>
+      <div id="q3Box" style="margin-top:14px"></div>
+      <div class="note" id="q3Note" style="margin-top:10px"></div>
+    </div>
+  </section>
+
+  <section class="step" id="step4">
+    <h2><span class="no">STEP 4</span>Webページのアクセシビリティを試す（問3）</h2>
+    <p class="desc">下の見本のページを、スイッチで変えてみましょう。読みにくさを実際に体験できます。</p>
+    <div class="panel">
+      <div class="grid c2">
+        <div>
+          <label class="fld" for="fsz">文字の大きさ：<span class="mono" id="fszV">100</span>％</label>
+          <input type="range" id="fsz" min="70" max="180" step="5" value="100">
+          <label class="fld" for="ctr" style="margin-top:12px">文字の濃さ（コントラスト）：<span class="mono" id="ctrV">100</span>％</label>
+          <input type="range" id="ctr" min="0" max="100" step="5" value="100">
+          <label class="fld" style="margin-top:12px"><input type="checkbox" id="altOn" checked> 画像に代替テキストを設定する</label>
+          <label class="fld" style="margin-top:6px"><input type="checkbox" id="movieOnly"> すべての情報を動画のみで提供する</label>
+          <div class="metrics" style="margin-top:12px">
+            <div class="metric"><div class="k">コントラスト比</div><div class="v ratio" id="ratioV">—</div><div class="s">4.5:1 以上が目安</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="demo" id="demoBox"></div>
+        </div>
+      </div>
+      <div class="note" id="a11yNote" style="margin-top:12px"></div>
+      <hr class="sep">
+      <div id="q4Box"></div>
+      <div class="note" id="q4Note" style="margin-top:10px"></div>
+    </div>
+  </section>
+
+  <section class="step" id="step5">
+    <h2><span class="no">STEP 5</span>ユニバーサルデザインの7原則（問4）</h2>
+    <div class="panel">
+      <div class="ud7" id="ud7Box"></div>
+      <div id="q5Box" style="margin-top:14px"></div>
+      <div class="note" id="q5Note" style="margin-top:10px"></div>
+    </div>
+  </section>
+
+  <section class="step" id="glossary">
+    <h2><span class="no">用語</span>この節で出てくることば</h2>
+    <div class="panel"><div id="glossBox"></div></div>
+  </section>
+
+  <section class="step" id="wrap">
+    <h2><span class="no">まとめ</span>おさえておきたいこと</h2>
+    <div class="panel">
+      <ul class="bullets">
+        <li><strong>ピクトグラム</strong>＝文字を使わない案内用図記号。<strong>特定の言語に依らず</strong>視覚的に伝えられる。</li>
+        <li><strong>バリアフリー</strong>＝障がいを取り除く。<strong>ユニバーサルデザイン</strong>＝はじめから障壁がないように設計する。</li>
+        <li><strong>ユーザビリティ</strong>＝使いやすさ・分かりやすさの尺度。<strong>アクセシビリティ</strong>＝幅広い人がアクセスしやすいかの尺度。</li>
+        <li>Webアクセシビリティの基本は、代替テキスト・文字サイズの変更・十分なコントラスト。<strong>動画だけで伝えるのは不適切</strong>。</li>
+        <li>UDの7原則のうち「必要な情報が簡単に理解できる」の例が<strong>ピクトグラム</strong>。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="step">
+    <h2><span class="no">活用</span>授業・探究での使い方</h2>
+    <div class="use-note">
+      <h3>授業で</h3>
+      <ul>
+        <li>STEP 1 のピクトグラムを言葉なしで読ませ、なぜ伝わるのかを話し合う。</li>
+        <li>STEP 4 のコントラスト調整で、読みにくい配色を実際に体験させる。</li>
+        <li>STEP 2 でバリアフリーとユニバーサルデザインの違いを、学校の設備で例を挙げさせる。</li>
+      </ul>
+      <h3 style="margin-top:12px">探究で</h3>
+      <ul>
+        <li>学校や駅のピクトグラムを集め、伝わりやすいもの・伝わりにくいものを比べる。</li>
+        <li>自分のスマートフォンのアクセシビリティ設定を調べ、どんな人のための機能かを考える。</li>
+        <li>配色を変えて、色覚に配慮した資料を作り直す。</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  情報Ⅰ 共通テスト対策問題集（技術評論社）連動Webアプリ　/　Created by Dit-Lab.(Daiki ITO)　/　Supported by Tomoaki ATSUMI
+</footer>
+
+<script src="js/tools.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/terms.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
