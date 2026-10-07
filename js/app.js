@@ -222,6 +222,8 @@
     });
 
     window.Terms.attach();
+    const target = location.hash && document.querySelector(location.hash);
+    if (target) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
